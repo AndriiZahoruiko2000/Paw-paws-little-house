@@ -22,10 +22,7 @@ export async function sendOrder(data) {
 
     return response.data;
   } catch (error) {
-    console.error(
-      'Помилка запиту:',
-      error.response?.data || error.message
-    );
+    console.error('Помилка запиту:', error.response?.data || error.message);
     throw error;
   }
 }
