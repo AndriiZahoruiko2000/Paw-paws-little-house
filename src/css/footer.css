@@ -1,4 +1,101 @@
 /* footer.css */
 .footer {
-  padding: 20px 0;
+  font-family: var(--font-family);
+  line-height: 1.5;
+  color: var(--color-scheme-1-text);
+  background-color: var(--color-scheme-2-background);
+  padding-bottom: 64px;
+  padding-top: 64px;
+}
+
+/* Logo */
+.footer-logo-link {
+  padding: 14px 2px 18px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.footer-logo-img {
+  width: 298px;
+  height: 97px;
+}
+
+/* Footer links */
+.footer-anchor-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  row-gap: 32px;
+  margin-top: 32px;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-anchor-list {
+    flex-direction: row;
+    row-gap: 0px;
+    column-gap: 32px;
+  }
+}
+.footer-anchor-item {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-scheme-1-text);
+}
+
+@media only screen and (min-width: 1440px) {
+  .footer-anchor-item {
+    font-size: 14px;
+  }
+  .footer-anchor-item:hover, .footer-anchor-item:focus {
+    cursor: pointer;
+    color: var(--color-neutral-darkest);
+    text-decoration: underline;
+  }
+  .footer-anchor-item:active {
+    color: var(--color-mariner-dark);
+    text-decoration: underline;
+  }
+}
+
+/* Social links */
+.footer-social-list {
+  display: flex;
+  flex-direction: row;
+  column-gap: 24px;
+  justify-content: center;
+  margin-top: 32px;
+  fill: var(--color-scheme-1-text);
+}
+
+@media only screen and (min-width: 1440px) {
+  .footer-social-list:hover, .footer-social-list:focus {
+    cursor: pointer;
+  }
+}
+
+/* Copyrights */
+.separator{
+  height: 0px;
+  margin-top: 80px;
+  border: 1px var(--color-scheme-1-border) solid;
+}
+/* @media only screen and (min-width: 1440px) {
+  .separator{
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+} */
+
+.footer-copyrights {
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 32px;
+}
+@media only screen and (min-width: 1440px) {
+  .footer-copyrights {
+    font-size: 14px;
+  }
 }
