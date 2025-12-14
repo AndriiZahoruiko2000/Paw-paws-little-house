@@ -162,7 +162,7 @@
   /* line-height: 21px; */
   line-height: 1.5;
   color: #02060a;
-  margin-top: auto;
+  margin: auto auto 0;
 }
 
 .is-active {
