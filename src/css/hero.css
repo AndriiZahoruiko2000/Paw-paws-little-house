@@ -1,5 +1,9 @@
 /* hero.css */
 
+html {
+    scroll-behavior: smooth;
+}
+
 .hero-container {
     background-image: url('../img/hero/hero-ima-dog-and-cat.jpg');
     background-size: cover;
@@ -70,6 +74,10 @@
     align-items: center;
     text-decoration: none;
     transition: background-color 0.25s ease;
+}
+
+#success-history {
+    scroll-margin-top: 100px;  
 }
 
 .hero-button:hover,
