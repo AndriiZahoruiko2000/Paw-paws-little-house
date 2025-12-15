@@ -4,6 +4,8 @@ import {
   createTemplateCategories,
   createTemplatePets,
 } from './render-functions';
+import { renderPagination } from './pagination';
+import { scrollToCategories } from './scroll';
 
 //!================================================
 const refs = {
@@ -11,6 +13,7 @@ const refs = {
   petList: document.querySelector('.js-pet-list'),
   petCategories: document.querySelector('.js-pet-categories'),
   showDetailsBtn: document.querySelector('.js-more-info'),
+  pagination: document.querySelector('.js-pet-pagination'),
 };
 
 refs.showMoreBtn.disabled = true;
@@ -19,9 +22,14 @@ function getPerPage() {
   return window.innerWidth >= 1440 ? 9 : 8;
 }
 
+function isMobile() {
+  return window.innerWidth < 768;
+}
+
 let page = 1;
 let perPage = getPerPage();
 let query = 'all';
+let totalPages = 1;
 //!================================================
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -36,9 +44,23 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 document.addEventListener('DOMContentLoaded', async e => {
   const response = await getAnimals(page, perPage);
-  const markup = createTemplatePets(response.animals);
-  refs.petList.innerHTML = markup;
-  refs.showMoreBtn.disabled = response.animals.length < perPage;
+  refs.petList.innerHTML = createTemplatePets(response.animals);
+
+  totalPages = Math.ceil(response.totalItems / response.limit);
+
+  if (isMobile()) {
+    refs.showMoreBtn.disabled = response.animals.length < perPage;
+    refs.pagination.innerHTML = '';
+  } else {
+    refs.showMoreBtn.classList.add('is-hidden');
+    refs.showMoreBtn.disabled = true;
+
+    renderPagination({
+      container: refs.pagination,
+      current: page,
+      total: totalPages,
+    });
+  }
 });
 
 refs.petCategories.addEventListener('click', async e => {
@@ -66,12 +88,31 @@ refs.petCategories.addEventListener('click', async e => {
 
   refs.petList.innerHTML = createTemplatePets(response.animals);
 
-  refs.showMoreBtn.disabled = response.animals.length < perPage;
+  totalPages = Math.ceil(response.totalItems / response.limit);
+
+  if (isMobile()) {
+    refs.showMoreBtn.classList.remove('is-hidden');
+    refs.showMoreBtn.disabled = response.animals.length < perPage;
+    refs.pagination.innerHTML = '';
+  } else {
+    refs.showMoreBtn.classList.add('is-hidden');
+    refs.showMoreBtn.disabled = true;
+
+    renderPagination({
+      container: refs.pagination,
+      current: page,
+      total: totalPages,
+    });
+
+    scrollToCategories(refs.petCategories);
+  }
 });
 
 //!================================================
 
 refs.showMoreBtn.addEventListener('click', async () => {
+  if (!isMobile()) return;
+
   page += 1;
   perPage = getPerPage();
 
