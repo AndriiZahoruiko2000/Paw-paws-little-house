@@ -8,7 +8,7 @@ html {
     background-image: url('../img/hero/hero-ima-dog-and-cat.jpg');
     background-size: cover;
     background-position: center;
-    height: 900px;
+    height: 544px;
     position: relative;
     overflow: hidden;
 }
@@ -31,17 +31,16 @@ html {
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding-top: 128px;
-    max-width: 550px;
+    padding-top: 64px;
+    max-width: 335px;
 }
 
 .hero-description-container {
-    height: 279px;
     color: #FFFFFF;
 }
 
 .hero-description-title {
-    font-size: 48px;
+    font-size: 40px;
     line-height: 120%;
     font-weight: 700;
     font-style: bold;
@@ -55,15 +54,14 @@ html {
     font-weight: 400;
     letter-spacing: 0;
     margin-top: 24px;
-    width: 460px;
 }
 
 .hero-button {
     background-color: #88765C;
     border: none;
     border-radius: 6px;
-    width: 189px;
-    height: 48px;
+    width: 171px;
+    height: 45px;
     color: #FFFFFF;
     font-weight: 400;
     font-size: 16px;
@@ -74,15 +72,57 @@ html {
     align-items: center;
     text-decoration: none;
     transition: background-color 0.25s ease;
+    gap: 8px;
+    margin-top: 32px;
 }
 
 #success-history {
     scroll-margin-top: 100px;  
 }
 
-.hero-button:hover,
-.hero-button:focus{
+.hero-button:hover{
     background-color: #C3B49D;
     border: #02060A 1px solid;
     color: #02060A;
+}
+
+
+@media screen and (min-width: 768px) {
+    .hero-container {
+        display: flex;
+    }
+
+    .hero-content-container {
+        max-width: 704px;
+    }
+
+    .hero-description-text {
+        width: 512px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+ 
+    .hero-container {
+        height: 900px;
+    }
+
+    .hero-description-container{
+        width: 622px;
+        padding-top: 80px;
+    }
+
+    .hero-description-title  {
+        font-size: 56px;
+    }
+
+    .hero-description-text {
+        width: 460px;
+    }
+
+    .hero-button {
+        width: 198px;
+        height: 48px;
+        gap: 16px;
+    }
 }
