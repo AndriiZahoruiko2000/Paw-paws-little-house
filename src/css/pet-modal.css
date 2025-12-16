@@ -1,9 +1,8 @@
-/* pet-modal.css */
-
+/* ================= BACKDROP ================= */
 .backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   display: none;
   align-items: center;
   justify-content: center;
@@ -14,43 +13,113 @@
   display: flex;
 }
 
+/* ================= MODAL WINDOW ================= */
 .modal-window {
-  background: #fff;
-  max-width: 900px;
-  width: 100%;
-  padding: 24px;
-  border-radius: 12px;
-}
-
-.pet-modal {
+  background: #fdfaf5;
+  width: calc(100% - 32px);
+  max-width: 1200px;
+  max-height: calc(100vh - 32px);
+  border-radius: 16px;
+  padding: 40px;
   position: relative;
+  overflow-y: auto; /* 🔑 скрол ТУТ */
 }
 
-.pet-modal-close {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.pet-modal-content {
+/* ================= PET MODAL LAYOUT ================= */
+.pet-modal {
   display: flex;
-  gap: 24px;
+  gap: 40px;
+  align-items: flex-start;
 }
 
+/* ================= IMAGE ================= */
 .pet-modal-image img {
-  max-width: 400px;
-  width: 100%;
-  border-radius: 8px;
+  width: 480px;
+  max-width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* ================= INFO ================= */
+.pet-modal-info {
+  flex: 1;
+}
+
+.pet-modal-species {
+  font-size: 14px;
+  color: #7a7a7a;
+}
+
+.pet-modal-name {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+.pet-modal-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 16px;
+  margin-bottom: 24px;
 }
 
 .pet-modal-info h3 {
-  margin-top: 16px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-size: 18px;
 }
 
+.pet-modal-info p {
+  line-height: 1.5;
+}
+
+/* ================= BUTTON ================= */
 .take-home {
-  margin-top: 24px;
+  margin-top: 32px;
+  width: 100%;
+  padding: 16px;
+  background: #8b7a62;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ================= CLOSE ================= */
+.pet-modal-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .modal-window {
+    padding: 24px;
+  }
+
+  .pet-modal {
+    flex-direction: column;
+  }
+
+  .pet-modal-image img {
+    width: 100%;
+  }
+
+  .pet-modal-name {
+    font-size: 28px;
+  }
+}
+
+/* ================= SCROLL LOCK ================= */
+html.modal-open,
+body.modal-open {
+  overflow: hidden;
+  height: 100%;
+  touch-action: none;
 }
