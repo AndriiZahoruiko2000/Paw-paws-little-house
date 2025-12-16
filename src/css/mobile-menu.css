@@ -1,9 +1,14 @@
 /* mobile-menu.css */
+main{
+  scroll-behavior: smooth;
+}
 body{
   margin: 0;
 }
-.location {
+.mobile-menu {
   display: none;
+  position: absolute;
+  z-index: 999;
   flex-direction: column;
   background-color: #F6F4F1;
   width: 100vw;
@@ -34,7 +39,7 @@ body{
 .menu-link{
   text-decoration: none;
   color: #02060A;
-  font-family: 'IBM ';
+  font-family: 'IBM Plex Sans ', sans-serif;
 }
 .menu-container{
   margin: 0 auto;
