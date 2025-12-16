@@ -41,6 +41,7 @@ body{
   color: #02060A;
   font-family: 'IBM Plex Sans ', sans-serif;
 }
+
 .menu-container{
   margin: 0 auto;
   flex-direction: column;
@@ -50,7 +51,7 @@ body{
 
 }
 .take-a-friend{
-  background-color: #88765C;
+  background-color: var(--color-mariner-dark);
   border: none;
   border-radius: 8px;
   color: white;
@@ -63,11 +64,19 @@ body{
 .is-visible{
   display: flex;
 }
-@media (min-width: 768px) {
-  .menu-items-list{
-    align-items: center;
-  }
+
+.burger-btn {
+  display: block;
 }
-.close-btn{
-  cursor: pointer;
+
+.close-btn {
+  display: none;
+}
+
+.burger-btn.is-hidden {
+  display: none;
+}
+
+.close-btn.is-visible {
+  display: block;
 }
