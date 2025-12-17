@@ -7,6 +7,9 @@ import {
 import { renderPagination } from './pagination';
 import { scrollToCategories } from './scroll';
 
+// ================== GLOBAL STORAGE ==================
+export const allAnimals = []; // ← ГЛОБАЛЬНИЙ МАСИВ
+
 //!================================================
 const refs = {
   showMoreBtn: document.querySelector('.js-pet-show-more-btn'),
@@ -32,18 +35,27 @@ let query = 'all';
 let totalPages = 1;
 //!================================================
 
+// ----------- LOAD CATEGORIES -----------
 document.addEventListener('DOMContentLoaded', async () => {
   const response = await getCategories();
   perPage = getPerPage();
-  const markup = createTemplateCategories(response.sort().reverse());
-  refs.petCategories.innerHTML = markup;
+  refs.petCategories.innerHTML = createTemplateCategories(
+    response.sort().reverse()
+  );
 
   const allBtn = refs.petCategories.querySelector('[data-category="all"]');
   allBtn.closest('.pet-category-item').classList.add('is-active');
 });
 
-document.addEventListener('DOMContentLoaded', async e => {
+// ----------- FIRST LOAD PETS -----------
+document.addEventListener('DOMContentLoaded', async () => {
   const response = await getAnimals(page, perPage);
+
+  allAnimals.length = 0; // 🔴 очистка
+  allAnimals.push(...response.animals); // ✅ зберігаємо
+
+  refs.petList.innerHTML = createTemplatePets(response.animals);
+  refs.showMoreBtn.disabled = response.animals.length < perPage;
   refs.petList.innerHTML = createTemplatePets(response.animals);
 
   totalPages = Math.ceil(response.totalItems / response.limit);
@@ -63,6 +75,7 @@ document.addEventListener('DOMContentLoaded', async e => {
   }
 });
 
+// ----------- CHANGE CATEGORY -----------
 refs.petCategories.addEventListener('click', async e => {
   if (e.target.nodeName !== 'BUTTON') return;
 
@@ -75,7 +88,6 @@ refs.petCategories.addEventListener('click', async e => {
   query = e.target.dataset.category;
   page = 1;
   perPage = getPerPage();
-
   refs.showMoreBtn.disabled = false;
 
   let response;
@@ -85,6 +97,9 @@ refs.petCategories.addEventListener('click', async e => {
   } else {
     response = await getAnimalsByQuery(query, page, perPage);
   }
+
+  allAnimals.length = 0; // 🔴 очистка
+  allAnimals.push(...response.animals); // ✅ нові дані
 
   refs.petList.innerHTML = createTemplatePets(response.animals);
 
@@ -108,8 +123,7 @@ refs.petCategories.addEventListener('click', async e => {
   }
 });
 
-//!================================================
-
+// ----------- SHOW MORE -----------
 refs.showMoreBtn.addEventListener('click', async () => {
   if (!isMobile()) return;
 
@@ -124,6 +138,8 @@ refs.showMoreBtn.addEventListener('click', async () => {
     response = await getAnimalsByQuery(query, page, perPage);
   }
 
+  allAnimals.push(...response.animals); // ✅ ДОДАЄМО В МАСИВ
+
   refs.petList.insertAdjacentHTML(
     'beforeend',
     createTemplatePets(response.animals)
@@ -135,13 +151,13 @@ refs.showMoreBtn.addEventListener('click', async () => {
 
   scrollPage();
 });
+
 //!================================================
 function scrollPage() {
   const elem = document.querySelector('.js-pet-list > *');
   if (!elem) return;
 
-  const rect = elem.getBoundingClientRect();
-  const heightOfElem = rect.height * 2;
+  const heightOfElem = elem.getBoundingClientRect().height * 2;
 
   window.scrollBy({
     top: heightOfElem,
