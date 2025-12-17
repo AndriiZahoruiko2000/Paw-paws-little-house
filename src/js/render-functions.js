@@ -138,7 +138,7 @@ export function createModalTemplate(pet) {
           <h3>Поведінка:</h3>
           <p>${pet.behavior}</p>
 
-          <button class="take-home js-takehome-btn">
+          <button class="take-home js-takehome-btn" data-id="${pet._id}">
             Взяти додому
           </button>
         </div>

@@ -2,42 +2,55 @@
 .backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: none;
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  padding: 6%;
+  overflow: hidden;
+
 }
 
 .backdrop.is-open {
   display: flex;
+  pointer-events: auto;
 }
 
 /* ================= MODAL WINDOW ================= */
 .modal-window {
-  background: #fdfaf5;
-  width: calc(100% - 32px);
-  max-width: 1200px;
-  max-height: calc(100vh - 32px);
-  border-radius: 16px;
-  padding: 40px;
   position: relative;
-  overflow-y: auto; /* 🔑 скрол ТУТ */
+  background: var(--color-scheme-1-background);
+  border-radius: 8px;
+  padding: 64px 20px;
+  box-sizing: border-box;
+  width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  max-width: 335px;
 }
 
 /* ================= PET MODAL LAYOUT ================= */
-.pet-modal {
+/* .pet-modal {
   display: flex;
   gap: 40px;
   align-items: flex-start;
-}
+} */
 
 /* ================= IMAGE ================= */
 .pet-modal-image img {
-  width: 480px;
-  max-width: 100%;
+  /* width: 100%; */
+  /* max-width: 295px; */
   border-radius: 16px;
   object-fit: cover;
+  margin-bottom: 32px;
+  display: block;
+  max-width: 100%;
 }
 
 /* ================= INFO ================= */
@@ -64,7 +77,7 @@
 }
 
 .pet-modal-info h3 {
-  margin-top: 20px;
+  margin-top: 24px;
   margin-bottom: 8px;
   font-size: 18px;
 }
@@ -89,23 +102,78 @@
 /* ================= CLOSE ================= */
 .pet-modal-close {
   position: absolute;
-  top: 24px;
-  right: 24px;
-  background: none;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
   border: none;
-  font-size: 24px;
   cursor: pointer;
+  padding: 0;
 }
 
 /* ================= MOBILE ================= */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .modal-window {
-    padding: 24px;
+    max-width: 704px;
+    padding: 64px 32px;
   }
 
-  .pet-modal {
-    flex-direction: column;
+
+
+  .pet-modal-content {
+    display: flex;
+    gap: 32px;
+    width: 100%;
   }
+
+  .pet-modal-image,
+  .pet-modal-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .pet-modal-image img {
+    width: 100%;
+    height: 450px;
+    margin-bottom: 0;
+  }
+
+  /* ====================================== */
+
+  @media (min-width: 768px) and (max-width: 1439px) {
+    .pet-modal-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pet-modal-info>* {
+      order: 2;
+    }
+
+    .pet-modal-species,
+    .pet-modal-name,
+    .pet-modal-meta {
+      order: 1;
+    }
+
+    .take-home {
+      order: 2;
+      margin: 0 auto;
+    }
+
+    .pet-modal-info h3,
+    .pet-modal-info h3+p {
+      order: 3;
+    }
+  }
+
+  /* ============================ */
+
+  /* ==================== */
+
+
 
   .pet-modal-image img {
     width: 100%;
@@ -116,10 +184,50 @@
   }
 }
 
+@media (min-width: 1440px) {
+  .modal-window {
+    max-width: 1312px;
+    padding: 64px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .pet-modal-content {
+    max-width: 1184px;
+  }
+
+  .pet-modal-content {
+    width: 100%;
+    max-width: 1184px;
+    margin: 0 auto;
+    display: flex;
+    gap: 32px;
+  }
+
+  .pet-modal-name {
+    font-size: 40px;
+  }
+
+  .pet-modal-info h3 {
+    font-size: 16px;
+  }
+
+  .pet-modal-info {
+    max-width: 576px;
+  }
+
+  .pet-modal-image img {
+    max-width: 100%;
+  }
+}
+
 /* ================= SCROLL LOCK ================= */
-html.modal-open,
+/* html.modal-open,
 body.modal-open {
   overflow: hidden;
   height: 100%;
   touch-action: none;
+} */
+body.modal-open {
+  overflow: hidden;
 }
