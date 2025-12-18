@@ -154,10 +154,10 @@ refs.showMoreBtn.addEventListener('click', async () => {
 
 //!================================================
 function scrollPage() {
-  const elem = document.querySelector('.js-pet-list > *');
+  const elem = document.querySelector('.js-pet-list div.pet-card__container');
   if (!elem) return;
-
-  const heightOfElem = elem.getBoundingClientRect().height * 2;
+ 
+  const heightOfElem = elem.getBoundingClientRect().height ;
 
   window.scrollBy({
     top: heightOfElem,
