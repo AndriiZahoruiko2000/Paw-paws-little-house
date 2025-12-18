@@ -1,12 +1,13 @@
 import { createModalTemplate } from './render-functions';
 import { allAnimals } from './pets-list';
+import { openOrderModal } from './order-modal';
+
+const refs = { petList: null, backdrop: null, modalWindow: null };
 
 document.addEventListener('DOMContentLoaded', () => {
-  const refs = {
-    petList: document.querySelector('.js-pet-list'),
-    backdrop: document.querySelector('.js-backdrop'),
-    modalWindow: document.querySelector('.js-modal-window'),
-  };
+  refs.petList = document.querySelector('.js-pet-list');
+  refs.backdrop = document.querySelector('.js-backdrop');
+  refs.modalWindow = document.querySelector('.js-modal-window');
 
   if (!refs.petList || !refs.backdrop || !refs.modalWindow) return;
 
@@ -21,51 +22,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
     refs.modalWindow.innerHTML = createModalTemplate(pet);
     refs.backdrop.classList.add('is-open');
-
-    lockScroll();
+    document.body.classList.add('modal-open');
   });
 
   /* ================= CLOSE MODAL ================= */
+
+  function closePetModal() {
+    if (!refs.backdrop || !refs.modalWindow) return;
+    refs.backdrop.classList.remove('is-open');
+    document.body.classList.remove('modal-open');
+    refs.modalWindow.innerHTML = '';
+  }
+
   refs.backdrop.addEventListener('click', e => {
-    if (
-      e.target === refs.backdrop ||
-      e.target.closest('.js-modal-close')
-    ) {
-      closeModal();
+    if (e.target === refs.backdrop || e.target.closest('.js-modal-close')) {
+      closePetModal();
     }
   });
 
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && refs.backdrop.classList.contains('is-open')) {
-      closeModal();
+      closePetModal();
     }
   });
 
-  function closeModal() {
-    refs.backdrop.classList.remove('is-open');
-    refs.modalWindow.innerHTML = '';
-    unlockScroll();
-  }
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('.js-takehome-btn');
+    if (!btn) return;
 
-  /* ================= SCROLL LOCK ================= */
-  function lockScroll() {
-    document.documentElement.style.overflow = 'hidden';
-    document.body.style.overflow = 'hidden';
+    const animalId = btn.dataset.id;
+    if (!animalId) return;
 
-    // ⛔ блокуємо wheel / touch
-    document.addEventListener('wheel', preventScroll, { passive: false });
-    document.addEventListener('touchmove', preventScroll, { passive: false });
-  }
-
-  function unlockScroll() {
-    document.documentElement.style.overflow = '';
-    document.body.style.overflow = '';
-
-    document.removeEventListener('wheel', preventScroll);
-    document.removeEventListener('touchmove', preventScroll);
-  }
-
-  function preventScroll(e) {
-    e.preventDefault();
-  }
+    closePetModal();
+    openOrderModal(animalId);
+  });
 });

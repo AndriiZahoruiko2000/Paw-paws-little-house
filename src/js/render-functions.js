@@ -111,7 +111,9 @@ export function createModalTemplate(pet) {
         class="pet-modal-close js-modal-close"
         aria-label="Close modal"
       >
-        ×
+        <svg width="24" height="24">
+            <use href="/img/sprite.svg#icon-close" width="24" height="24"></use>
+          </svg>
       </button>
 
       <div class="pet-modal-content">

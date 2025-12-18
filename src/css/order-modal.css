@@ -21,7 +21,6 @@ body.modal-open {
     pointer-events: none;
     visibility: hidden;
     padding: 6%;
-
 }
 
 .js-modal-order-overlay.is-open {
@@ -104,7 +103,7 @@ body.modal-open {
     outline: transparent;
     background: var(--opacity-neutral-darkest-5);
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+    resize: none
 }
 
 
@@ -197,7 +196,7 @@ body.modal-open {
     line-height: 150%;
     color: var(--color-red);
     min-height: 14px;
-    margin-top: 8px;
+
 }
 
 .is-error .modal-order-input,
