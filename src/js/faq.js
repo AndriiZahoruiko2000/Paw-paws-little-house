@@ -3,8 +3,8 @@ import "accordion-js/dist/accordion.min.css";
 import imgUrlAdd from '/img/sprite.svg#icon-add'
 import imgUrlClose from '/img/sprite.svg#icon-close'
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+// import AOS from 'aos';
+// import 'aos/dist/aos.css';
 
 AOS.init({
     duration: 1500, // optional settings
