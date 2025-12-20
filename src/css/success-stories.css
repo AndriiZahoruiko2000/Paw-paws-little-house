@@ -199,14 +199,13 @@
     margin: 0 4px !important;
   }
 
-  .reviews-slider .swiper-pagination-bullet-active + .swiper-pagination-bullet {
+  .reviews-slider .swiper-pagination-bullet-active+.swiper-pagination-bullet {
     width: 6px;
     height: 6px;
     opacity: 0.8;
   }
 
-  .reviews-slider
-    .swiper-pagination-bullet:has(+ .swiper-pagination-bullet-active) {
+  .reviews-slider .swiper-pagination-bullet:has(+ .swiper-pagination-bullet-active) {
     width: 6px;
     height: 6px;
     opacity: 0.8;
@@ -374,6 +373,7 @@
     position: static;
     transform: none;
     margin: 0;
+    color: var(--color-scheme-1-text);
   }
 
   .reviews-slider .swiper-pagination {
