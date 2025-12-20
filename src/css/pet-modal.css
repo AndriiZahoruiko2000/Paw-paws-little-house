@@ -90,12 +90,27 @@ body.modal-open {
   margin-top: 32px;
   width: 100%;
   padding: 16px;
-  background: #8b7a62;
-  color: #fff;
-  border: none;
+  background: var(--color-mariner-dark);
+  color: var(--color-white);
+  border: 1px solid transparent;
   border-radius: 12px;
   font-size: 16px;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 120ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.take-home:hover,
+.take-home:focus {
+  border: 1px solid var(--color-neutral-darkest);
+  background: var(--color-mariner-light);
+}
+
+.take-home:active {
+  box-shadow: inset 0 4px 6px -2px rgba(0, 0, 0, 0.03), inset 0 12px 16px -4px rgba(0, 0, 0, 0.08);
+  background: var(--color-mariner-light);
 }
 
 /* ================= CLOSE ================= */
@@ -156,7 +171,7 @@ body.modal-open {
     flex-direction: column;
   }
 
-  .pet-modal-info > * {
+  .pet-modal-info>* {
     order: 2;
   }
 
@@ -172,7 +187,7 @@ body.modal-open {
   }
 
   .pet-modal-info h3,
-  .pet-modal-info h3 + p {
+  .pet-modal-info h3+p {
     order: 3;
   }
 }
