@@ -110,15 +110,27 @@
   .menu-header {
     padding: 8px 32px;
   }
+
+  .menu-content {
+    justify-content: center;
+  }
+
+  .menu-nav-list {
+    align-items: center;
+  }
+
+  .take-a-friend {
+    margin: 0 auto;
+    margin-top: 64px;
+  }
 }
 
 @media (min-width: 1440px) {
   .take-a-friend {
     width: 196px;
-  }
-}
 
-@media (min-width: 1440px) {
+  }
+
   .mobile-menu {
     display: none;
   }
