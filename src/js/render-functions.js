@@ -2,9 +2,10 @@
 import fullStar from '/img/SVG/star-filled.svg';
 import halfStar from '/img/SVG/star-half.svg';
 import emptyStar from '/img/SVG/star-outline.svg';
-import imgUrlClose from '/img/sprite.svg#icon-close';
+// import imgUrlClose from '/img/sprite.svg#icon-close';
 // import AOS from 'aos';
 // import 'aos/dist/aos.css';
+const imgUrlClose = '/img/sprite.svg#icon-close';
 
 export function createTemplateCategory(category) {
   return `
