@@ -1,3 +1,6 @@
+import 'modern-normalize/modern-normalize.css';
+import './css/styles.css';
+
 import '/js/modal';
 import '/js/order-modal';
 import '/js/pagination';

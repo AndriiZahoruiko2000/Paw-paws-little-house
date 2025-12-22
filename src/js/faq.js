@@ -1,7 +1,9 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
-import imgUrlAdd from '/img/sprite.svg#icon-add';
-import imgUrlClose from '/img/sprite.svg#icon-close';
+// import imgUrlAdd from '/img/sprite.svg#icon-add';
+// import imgUrlClose from '/img/sprite.svg#icon-close';
+const imgUrlAdd = '/img/sprite.svg#icon-add';
+const imgUrlClose = '/img/sprite.svg#icon-close';
 
 // import AOS from 'aos';
 // import 'aos/dist/aos.css';

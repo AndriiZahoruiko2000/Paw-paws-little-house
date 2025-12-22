@@ -54,6 +54,7 @@
   .footer-anchor-link {
     display: inline-block;
   }
+
   .footer-anchor-link:active {
     color: var(--color-mariner-dark);
   }
@@ -67,14 +68,15 @@
     transition: 300ms;
   }
 
-  .footer-anchor-link:hover::after,   
+  .footer-anchor-link:hover::after,
   .footer-anchor-item:focus::after {
     width: 100%;
   }
+
   .footer-anchor-link:active::after {
     background: var(--color-mariner-dark);
   }
-  
+
 }
 
 /* Social links */
@@ -122,7 +124,7 @@
   }
 
   .footer {
-    max-width: 1440px;
+    /* max-width: 1440px; */
     margin: 0 auto;
   }
 }

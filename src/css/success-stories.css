@@ -329,9 +329,9 @@
 }
 
 @media only screen and (min-width: 1440px) {
-  .reviews-section .container {
+  /* .reviews-section .container {
     max-width: 1312px;
-  }
+  } */
 
   .reviews-title {
     font-size: 48px;
