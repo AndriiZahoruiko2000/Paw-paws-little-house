@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/Paw-paws-little-house/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paw Paws Little House</title>
+    <meta
+      name="description"
+      content="Відкрийте світ турботи та любові з Paw Paws Little House — тут ви знайдете улюбленців, корисні поради та натхнення для всієї родини."
+    />
+    <!-- Normalize -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> -->
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400..700&family=Open+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="/css/styles.css" /> -->
+    <script type="module" crossorigin src="/Paw-paws-little-house/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/Paw-paws-little-house/assets/vendor-mOY-8TUG.js">
+    <link rel="stylesheet" crossorigin href="/Paw-paws-little-house/assets/vendor-Bfg4IsyD.css">
+    <link rel="stylesheet" crossorigin href="/Paw-paws-little-house/assets/index-DTcH2Pi0.css">
+  </head>
+  <body>
+    <!-- header.html -->
+<header class="header">
+  <div class="container header-container">
+    <div class="wrapper-navigation">
+      <a href="#" class="logo-image" aria-label="Головна сторінка">
+        <svg aria-hidden="true" focusable="false">
+          <use href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-logo"></use>
+        </svg>
+      </a>
+      <nav class="nav" aria-label="Головна навігація">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#pet-list-section" class="nav-link">Знайди друга</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about-us-section" class="nav-link">Про нас</a>
+          </li>
+          <li class="nav-item">
+            <a href="#faq-section" class="nav-link">Часті запитання</a>
+          </li>
+          <li class="nav-item">
+            <a href="#success-stories-section" class="nav-link"
+              >Історії успіху</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <button
+      class="burger-btn"
+      aria-label="Відкрити меню навігації"
+      data-menu-open
+    >
+      <svg class="icon-burger" aria-hidden="true">
+        <use href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-burger-menu"></use>
+      </svg>
+    </button>
+    <a href="#pet-list-section" class="take-a-friend-header">Взяти друга</a>
+  </div>
+</header>
+
+    <!-- mobile-menu.html -->
+<div class="mobile-menu" id="mobilemenu" data-menu>
+  <div class="container menu-container">
+    <div class="menu-header">
+      <a href="/index.html" class="logo-image" aria-label="Перейти на головну сторінку">
+        <svg class="icon-logo" aria-hidden="true" focusable="false">
+          <use href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-logo"></use>
+        </svg>
+      </a>
+      <button class="close-btn" type="button" data-menu-close aria-label="Закрити мобільне меню">
+        <svg class="icon-menu-close" width="14" height="14">
+          <use href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-close-btn"></use>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="menu-content">
+      <ul class="menu-nav-list">
+        <li class="menu-nav-list-item">
+          <a href="#pet-list-section">Знайди друга</a>
+        </li>
+        <li class="menu-nav-list-item">
+          <a href="#about-us-section">Про нас</a>
+        </li>
+        <li class="menu-nav-list-item">
+          <a href="#faq-section">Часті запитання</a>
+        </li>
+        <li class="menu-nav-list-item">
+          <a href="#success-stories-section">Історії успіху</a>
+        </li>
+      </ul>
+
+      <a class="take-a-friend" href="#pet-list-section" aria-label="Перейти до списку тварин, щоб взяти друга">Взяти друга</a>
+    </nav>
+  </div>
+</div>
+
+    <main>
+      <!-- hero.html -->
+<section class="hero-section" id="hero-section">
+  <div class="container">
+    <div class="hero-description-container">
+      <h1 class="hero-description-title">
+        Кожне життя має значення. Знайди свого вірного друга
+      </h1>
+      <p class="hero-description-text">
+        Сотні котиків та собачок у притулку Хатинка Лапок чекають на свою
+        родину. Подаруйте їм дім.
+      </p>
+    </div>
+    <a href="#success-stories-section" class="hero-button" aria-label="Прослухати історії"
+      >Подивитись історії</a
+    >
+  </div>
+</section>
+
+      <!-- pet-list.html -->
+<section class="pet-list-section" id="pet-list-section" data-aos="fade-down">
+  <div class="container">
+    <h2 class="pet-title">Наші хвостики</h2>
+    <p class="pet-text">Вони дуже чекають на знайомство з вами</p>
+    <ul class="pet-categories js-pet-categories"></ul>
+    <ul class="pet-list js-pet-list"></ul>
+    <div class="js-pet-pagination"></div>
+    <button type="button" class="pet-show-more-btn js-pet-show-more-btn" aria-label="Відкрити більше тварин">
+      Показати Більше
+    </button>
+  </div>
+</section>
+
+      <!-- pet-modal.html -->
+<div class="backdrop js-backdrop">
+  <div class="modal-window js-modal-window"></div>
+</div>
+
+      <!-- order-modal.html -->
+<div class="container">
+  <div class="js-modal-order-overlay">
+    <div class="modal-order-content">
+      <button class="modal-close-btn" type="button" aria-label="close-btn">
+        <svg width="24" height="24">
+          <use href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-close" width="24" height="24"></use>
+        </svg>
+      </button>
+      <p class="modal-title">Залишіть заявку на знайомство</p>
+      <form class="modal-order-form" id="order-form" novalidate>
+        <div class="modal-order-form-content field">
+          <label class="modal-order-label" for="user-name">Ім'я*</label>
+          <div class="modal-order-form-input field">
+            <input
+              class="modal-order-input"
+              type="text"
+              id="user-name"
+              name="user-name"
+              aria-label="user-name"
+              placeholder="Андрій"
+              autocomplete="off"
+              aria-describedby="user-name-error"
+              required
+            />
+            <p class="field-error" id="user-name-error"></p>
+          </div>
+        </div>
+
+        <div class="modal-order-form-content field">
+          <label class="modal-order-label" for="phone">Телефон*</label>
+          <div class="modal-order-form-input field">
+            <input
+              class="modal-order-input"
+              type="tel"
+              id="phone"
+              name="phone"
+              aria-label="phone"
+              inputmode="tel"
+              placeholder="+38 (096) 111 22 33"
+              aria-describedby="phone-error"
+              autocomplete="off"
+              required
+            />
+            <p class="field-error" id="phone-error"></p>
+          </div>
+        </div>
+
+        <div class="modal-order-form-content field">
+          <label class="modal-order-label" for="user-comment">Коментар</label>
+          <textarea
+            class="modal-user-comment"
+            id="user-comment"
+            name="user-comment"
+            aria-label="user-comment"
+            placeholder="Напишіть ваш коментар"
+            aria-describedby="user-comment-error"
+          ></textarea>
+          <p class="field-error" id="user-comment-error"></p>
+        </div>
+
+        <button type="submit" class="modal-btn-send" aria-label="send">
+          Надіслати
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+      <!-- about-us.html -->
+
+<section class="about-us" id="about-us-section" data-aos="fade-up">
+  <div class="container">
+    <h2 class="about-us-title">Чому Хатинка Лапок</h2>
+
+    <div class="about-us-slider" role="region" aria-roledescription="carousel">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <p class="swiper-desc">
+              Все почалося у 2015 році з кількох небайдужих людей та одного
+              врятованого собаки. Сьогодні ми — один з найбільших притулків у
+              регіоні, але наша мета незмінна: дати другий шанс тим, кого
+              зрадили.
+            </p>
+            <img
+              class="about-img"
+              src="/Paw-paws-little-house/assets/start-CpZoXKZt.jpg"
+              srcset="/Paw-paws-little-house/assets/start-CpZoXKZt.jpg 1x, /Paw-paws-little-house/assets/start-2x-D_bg3uyp.jpg 2x"
+              alt="наш початок"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="swiper-slide">
+            <p class="swiper-desc">
+              Ми рятуємо, реабілітуємо та знаходимо люблячі родини для
+              безпритульних тварин. Наша мета — не просто дати прихисток, а й
+              забезпечити кожному "хвостику" щасливе та повноцінне життя в новій
+              родині.
+            </p>
+            <img
+              class="about-img img-position"
+              src="/Paw-paws-little-house/assets/dog-D-vDMqDu.jpg"
+              srcset="/Paw-paws-little-house/assets/dog-D-vDMqDu.jpg 1x, /Paw-paws-little-house/assets/dog-2x-CM9d4aue.jpg 2x"
+              alt="рятуємо тварин"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="swiper-slide">
+            <p class="swiper-desc">
+              "Хатинка Лапок" — це команда професійних ветеринарів, кінологів та
+              десятків волонтерів, які щодня вкладають свою душу та час у
+              турботу про наших підопічних. Ми працюємо 24/7, бо їхнє життя
+              залежить від нас.
+            </p>
+            <img
+              class="about-img"
+              src="/Paw-paws-little-house/assets/team-Bt0YwwXO.jpg"
+              srcset="/Paw-paws-little-house/assets/team-Bt0YwwXO.jpg 1x, /Paw-paws-little-house/assets/team-2x-CSDl8GY_.jpg 2x"
+              alt="наша команда"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="swiper-slide">
+            <p class="swiper-desc">
+              Ми створили безпечний та комфортний простір. Кожна тварина отримує
+              якісне харчування, своєчасну ветеринарну допомогу, проходить
+              соціалізацію та гуляє на спеціально обладнаних майданчиках.
+            </p>
+            <img
+              class="about-img"
+              src="/Paw-paws-little-house/assets/home-2ft-AV1T.jpg"
+              srcset="/Paw-paws-little-house/assets/home-2ft-AV1T.jpg 1x, /Paw-paws-little-house/assets/home-2x-Ba36btNk.jpg 2x"
+              alt="наш притулок"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="swiper-slide">
+            <p class="swiper-desc">
+              Ваша допомога — безцінна. Ви можете взяти тваринку додому, стати
+              волонтером, допомогти фінансово або інформаційно. Кожен маленький
+              внесок наближає нас до великої мети — світу без безпритульних
+              тварин.
+            </p>
+            <img
+              class="about-img"
+              src="/Paw-paws-little-house/assets/happy-Ba2ywfKI.jpg"
+              srcset="/Paw-paws-little-house/assets/happy-Ba2ywfKI.jpg 1x, /Paw-paws-little-house/assets/happy-2x--FjUaOLb.jpg 2x"
+              alt="щасливі тварини"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="about-us-slider-controls">
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-wrapper">
+          <div class="swiper-button-prev">
+            <svg width="24" height="24">
+              <use
+                href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-arrow-prev"
+                width="24"
+                height="24"
+              ></use>
+            </svg>
+          </div>
+
+          <div class="swiper-button-next">
+            <svg width="24" height="24">
+              <use
+                href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-arrow-next"
+                width="24"
+                height="24"
+              ></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- faq.html -->
+<section class="faq-section" id="faq-section">
+  <div class="container">
+    <h2 class="faq-header">Все, що ви хотіли знати</h2>
+    <ul class="faq-list accordion-container">
+      <li class="faq-list-item ac" data-aos="zoom-out">
+        <div class="faq-open-div ac-trigger">
+          <h3 class="faq-list-question ac-header">
+            Я мрію про пухнастика! Що мені потрібно зробити, щоб забрати
+            хвостика додому?
+          </h3>
+          <button
+            type="button"
+            class="faq-button"
+            aria-label="Відкрити відповідь"
+          >
+            <svg
+              class="faq-open-icon"
+              width="24"
+              height="24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <use class="faq-icon-use" href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-add"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq-close-div ac-panel">
+          <div class="faq-content-inner">
+            <p class="faq-text">
+              Це чудово, що ви готові подарувати дім одному з наших підопічних!
+              Ми дуже раді будемо вам у цьому допомогти. Процес «усиновлення» у
+              нас простий та зрозумілий:
+            </p>
+            <ol class="faq-list-close">
+              <li>
+                <p class="faq-text">
+                  Оберіть друга: Придивіться до наших хвостиків у розділі
+                  «Знайди друга».
+                </p>
+              </li>
+              <li>
+                <p class="faq-text">
+                  Залиште заявку: Коли відчуєте, що це «ваша» тваринка,
+                  натискайте кнопку «Взяти додому» та заповніть коротку анкету.
+                </p>
+              </li>
+              <li>
+                <p class="faq-text">
+                  Поговоріть з куратором: Наш волонтер зателефонує вам, щоб
+                  познайомитись ближче, розповісти про характер тваринки та
+                  відповісти на всі ваші питання.
+                </p>
+              </li>
+              <li>
+                <p class="faq-text">
+                  Приїжджайте знайомитись: Якщо ви ідеально підходите одне
+                  одному, ми домовимось про зустріч у притулку.
+                </p>
+              </li>
+              <li>
+                <p class="faq-text faq-text-last">
+                  Дорога додому: Після знайомства та підписання договору про
+                  відповідальне утримання, ваш новий друг поїде з вами у своє
+                  нове, щасливе життя!
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </li>
+      <li class="faq-list-item ac" data-aos="zoom-out">
+        <div class="faq-open-div ac-trigger">
+          <h3 class="faq-list-question ac-header">
+            Як мені найкраще підготувати свій дім та родину до появи хвостика?
+          </h3>
+          <button
+            type="button"
+            class="faq-button"
+            aria-label="Відкрити відповідь"
+          >
+            <svg
+              class="faq-open-icon"
+              width="24"
+              height="24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <use class="faq-icon-use" href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-add"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq-close-div ac-panel">
+          <div class="faq-content-inner">
+            <p class="faq-text">
+              Чудове питання, яке показує вашу турботу! Переїзд — це завжди
+              невеликий стрес для тваринки, але правильна підготовка зробить цей
+              процес легким і радісним. Ось кілька порад:
+            </p>
+            <ul class="faq-list-close">
+              <li>
+                <p class="faq-text">
+                  Безпечний простір: Переконайтесь, що на вікнах є сітки, а
+                  дроти та побутова хімія сховані.
+                </p>
+              </li>
+              <li>
+                <p class="faq-text">
+                  Особисті речі: Підготуйте для хвостика дві мисочки (для їжі та
+                  води), лежанку чи будиночок, лоток з наповнювачем для котика
+                  або повідець і нашийник для собачки.
+                </p>
+              </li>
+              <li>
+                <p class="faq-text">
+                  Сімейна розмова: Обговоріть з рідними майбутні обов'язки.
+                  Важливо, щоб усі були готові до появи нового мешканця.
+                </p>
+              </li>
+              <li>
+                <p class="faq-text faq-text-last">
+                  Терпіння та любов: Дайте тваринці час, щоб звикнути. Не квапте
+                  її, будьте поруч, розмовляйте лагідним голосом — і ваша любов
+                  творитиме дива!
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="faq-list-item ac" data-aos="zoom-out">
+        <div class="faq-open-div ac-trigger">
+          <h3 class="faq-list-question ac-header">
+            Чи можу я бути впевненим, що тваринка здорова? Розкажіть про
+            щеплення.
+          </h3>
+          <button
+            type="button"
+            class="faq-button"
+            aria-label="Відкрити відповідь"
+          >
+            <svg
+              class="faq-open-icon"
+              width="24"
+              height="24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <use class="faq-icon-use" href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-add"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq-close-div ac-panel">
+          <div class="faq-inner-content">
+            <p class="faq-text">
+              Так, звісно. Здоров'я наших підопічних — наш головний пріоритет.
+              Кожна тваринка, яка потрапляє до нас, проходить повний огляд у
+              ветеринара. Ми гарантуємо, що:
+            </p>
+            <ul class="faq-list-close">
+              <li>
+                <p class="faq-text">
+                  Усі хвостики оброблені від бліх та глистів.
+                </p>
+              </li>
+              <li>
+                <p class="faq-text">
+                  Усі вакциновані комплексною вакциною за віком.
+                </p>
+              </li>
+              <li>
+                <p class="faq-text">
+                  Дорослі тварини (зазвичай від 6-8
+                  місяців) стерилізовані/кастровані.
+                </p>
+              </li>
+            </ul>
+            <p class="faq-text faq-text-last">
+              Разом із тваринкою ви обов'язково отримаєте її ветеринарний
+              паспорт з усіма відмітками. Якщо у когось є особливі потреби у
+              догляді чи харчуванні, ми чесно і детально про це розповімо.
+            </p>
+          </div>
+        </div>
+      </li>
+      <li class="faq-list-item ac" data-aos="zoom-out">
+        <div class="faq-open-div ac-trigger">
+          <h3 class="faq-list-question ac-header">
+            Я дуже хочу допомогти, але поки не готовий до адопції. Чим я можу
+            підтримати «Хатинку лапок»?
+          </h3>
+          <button
+            type="button"
+            class="faq-button"
+            aria-label="Відкрити відповідь"
+          >
+            <svg
+              class="faq-open-icon"
+              width="24"
+              height="24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <use class="faq-icon-use" href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-add"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq-close-div ac-panel">
+          <div class="faq-inner-content">
+            <p class="faq-text">
+              Дякуємо вам за велике серце та бажання допомогти! Кожна допомога
+              для нас безцінна. Навіть якщо ви не можете взяти тваринку, ви
+              можете стати її янголом-охоронцем. Ось як:
+            </p>
+            <ul class="faq-list-close">
+              <li>
+                <p class="faq-text">
+                  Допомогти фінансово: Ваша пожертва піде на корм, ліки, оплату
+                  комунальних послуг та зарплату персоналу.
+                </p>
+              </li>
+              <li>
+                <p class="faq-text">
+                  Стати волонтером: Нам завжди потрібні люблячі руки для
+                  прогулянок з собачками, прибирання та, найголовніше, для
+                  спілкування з тваринками.
+                </p>
+              </li>
+              <li>
+                <p class="faq-text">
+                  Подарувати необхідне: Ми завжди раді кормам, лікам,
+                  наповнювачам для лотків, іграшкам, теплим ковдрам.
+                </p>
+              </li>
+              <li>
+                <p class="faq-text faq-text-last">
+                  Допомогти інформаційно: Найпростіший, але дуже дієвий спосіб —
+                  розповідати про нас у соцмережах. Можливо, саме ваш репост
+                  допоможе комусь знайти свою долю!
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="faq-list-item ac" data-aos="zoom-out">
+        <div class="faq-open-div ac-trigger">
+          <h3 class="faq-list-question ac-header">
+            Мені сподобалась одна з ваших тваринок на сайті. Чи можу я приїхати,
+            щоб познайомитися з нею особисто?
+          </h3>
+          <button
+            type="button"
+            class="faq-button"
+            aria-label="Відкрити відповідь"
+          >
+            <svg
+              class="faq-open-icon"
+              width="24"
+              height="24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <use class="faq-icon-use" href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-add"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq-close-div ac-panel">
+          <div class="faq-inner-content">
+            <p class="faq-text">
+              Авжеж! Ми віримо, що справжня магія стається лише при особистій
+              зустрічі. Щоб знайомство було комфортним і для вас, і для
+              тваринки, ми просимо вас спочатку заповнити онлайн-заявку на
+              нашому сайті.
+            </p>
+            <p class="faq-text faq-text-last">
+              Після цього з вами зв'яжеться куратор тваринки, щоб домовитись про
+              зручний час для вашого візиту. Такий підхід дозволяє нам приділити
+              вам максимум уваги та уникнути зайвого стресу для наших
+              підопічних. З нетерпінням чекаємо на знайомство!
+            </p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <!-- success-stories.html -->
+<section
+  class="reviews-section"
+  id="success-stories-section"
+  data-aos="fade-up"
+>
+  <div class="container">
+    <h2 class="reviews-title">Щасливі історії, що надихають</h2>
+    <p class="reviews-subtitle">
+      Ці хвостики вже знайшли свій дім. Ваш майбутній друг теж чекає на вас
+    </p>
+    <div class="reviews-slider" role="region" aria-roledescription="carousel">
+      <div class="swiper reviews-swiper">
+        <div class="swiper-wrapper" id="feedbacks-list"></div>
+      </div>
+      <div class="reviews-slider-controls">
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-wrapper">
+          <div class="swiper-button-prev">
+            <svg width="24" height="24">
+              <use
+                href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-arrow-prev"
+                width="24"
+                height="24"
+              ></use>
+            </svg>
+          </div>
+          <div class="swiper-button-next">
+            <svg width="24" height="24">
+              <use
+                href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-arrow-next"
+                width="24"
+                height="24"
+              ></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+    <!-- footer.html -->
+<footer class="footer">
+  <div class="container">
+    <!-- Logo -->
+    <a href="#" class="footer-logo-link" aria-label="Головна сторінка">
+      <svg class="footer-logo-img" aria-hidden="true" focusable="false">
+        <use href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-logo"></use>
+      </svg>
+    </a>
+
+    <!-- Footer links -->
+    <nav aria-label="Навігація футера">
+      <ul class="footer-anchor-list">
+        <li class="footer-anchor-item">
+          <a href="#about-us-section" class="footer-anchor-link">Про нас</a>
+        </li>
+        <li class="footer-anchor-item">
+          <a href="#pet-list-section" class="footer-anchor-link"
+            >Знайти друга</a
+          >
+        </li>
+        <li class="footer-anchor-item">
+          <a href="#faq-section" class="footer-anchor-link">Часті запитання</a>
+        </li>
+        <li class="footer-anchor-item">
+          <a
+            href="#success-stories-section"
+            class="footer-anchor-link"
+            id="success-history"
+            >Історії успіху</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Social links -->
+    <ul class="footer-social-list">
+      <li class="footer-social-item">
+        <a
+          class="footer-social-links"
+          href="https://www.facebook.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+          <svg
+            class="footer-social-icons"
+            width="32px"
+            height="32px"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <use href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-facebook"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="footer-social-item">
+        <a
+          class="footer-social-links"
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <svg
+            class="footer-social-icons"
+            width="32px"
+            height="32px"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <use href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-instagram"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Copyrights -->
+    <p class="separator"></p>
+    <p class="footer-copyrights">
+      &#169; 2025 Хатинка лапок. Всі права захищені.
+    </p>
+  </div>
+</footer>
+
+  </body>
+</html>
