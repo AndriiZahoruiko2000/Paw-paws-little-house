@@ -1,4 +1,4 @@
-// pet list
+// pet list!
 import { getAnimals, getAnimalsByQuery } from './paw-hut-api-animals';
 import { getCategories } from './paw-hut-api-categories';
 import {
